@@ -36,7 +36,7 @@ const LOgin = () => {
         signInWithPopup(auth,githubProvider)
         .then(result => {
             
-            console.log('git hub',result.user);
+            console.log('git hub:',result.user);
             setUser(result.user)
         })
         .catch(error =>{
