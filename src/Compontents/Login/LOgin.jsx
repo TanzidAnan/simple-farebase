@@ -23,9 +23,12 @@ const LOgin = () => {
     const hendleSignOut = () =>{
         signOut(auth)
         .then(() =>{
-            console.log('sing out done')
+            console.log('sing out done');
+            setUser(null)
         })
-        
+        .catch(error =>{
+            console.log(error)
+        })
     }
 
 
