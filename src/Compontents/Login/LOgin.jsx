@@ -40,7 +40,7 @@ const LOgin = () => {
             setUser(result.user)
         })
         .catch(error =>{
-            console.log('ERROR:',error),
+            console.log('ERROR',error),
             setUser(null)
         })
     }
