@@ -35,11 +35,12 @@ const LOgin = () => {
     const hendlegithub = () =>{
         signInWithPopup(auth,githubProvider)
         .then(result => {
-            console.log(result.user);
+            
+            console.log('git hub',result.user);
             setUser(result.user)
         })
         .catch(error =>{
-            console.log(error),
+            console.log('ERROR:',error),
             setUser(null)
         })
     }
