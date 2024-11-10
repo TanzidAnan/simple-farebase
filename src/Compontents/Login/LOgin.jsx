@@ -34,8 +34,11 @@ const LOgin = () => {
 
     return (
         <div>
-            <button onClick={hendleGoogleSingIn}>Login with Google</button>
-            <button onClick={hendleSignOut}>Sing Out</button>
+            
+            {
+                user ? <button onClick={hendleSignOut}>Sing Out</button>:<button onClick={hendleGoogleSingIn}>Login with Google</button>
+            }
+            
             {user && <h2>{user.displayName}</h2>}
         </div>
     );
